@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Map App</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body{
+            
+            background: linear-gradient(to right, #48a7dd, #7bfefe);
+            
+        }
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        li:hover {
+            background-color: #f0f0f0;
+        }
+
+        .map-con{
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        .container{
+            position: absolute;
+            height: 30vh;
+            top: 0;
+            right: 0;
+            width: 400px;     
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+          
+        }
+
+        h1{
+            font-family: sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            color: rgb(5, 110, 117);
+        }
+        input{
+            width: 300px;
+            padding: 10px 10px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+
+        button{
+            width: 320px;
+            padding: 10px 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(5, 110, 117);
+            color: white;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        #locationsList{
+        
+            width: 320px;
+            background-color: white;
+            text-decoration: none;
+            list-style-type: none;
+            margin-top: 10px;
+            position: absolute;
+            top: 200px;
+            font-family: sans-serif;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 5px;
+            
+
+         
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Location Map App</h1>
+        <input type="text" id="locationInput" placeholder="Enter a location" />
+        <button id="addLocationButton">Add Location</button>
+        <div id="locationsList"></div>
+        
+    </div>
+
+    <div class="location">
+        
+       
+    </div>
+    <div class="map-con">
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
